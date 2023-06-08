@@ -1,0 +1,379 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+/* Back to top */
+.to-top{
+    background: var(--brand-color);
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+.to-top.active{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 32px;
+}
+.to-top:hover{
+    background: var(--brand-color-light);
+}
+/* All Variabel */
+
+:root {
+    --brand-color: #86B817;
+    --brand-color-light: #98c33a;
+    --transition: all 0.5s ease;
+    --c-body: #727272;
+    --light: #F5F5F5;
+    --dark: #2c3e50;
+    --font-family: 'Nunito Sans', sans-serif;
+
+}
+
+body {
+    line-height: 1.7;
+    color: var(--c-body);
+    font-family: var(--font-family);
+
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+    color: #fff;
+}
+
+a:hover {
+    color: var(--brand-color);
+}
+
+.btn-brand {
+    padding: 14px 40px;
+    background: var(--brand-color);
+    color: #fff;
+    border-radius: 0;
+    transition: var(--transition);
+}
+
+.btn-brand:hover {
+    background: var(--brand-color-light);
+    color: #fff;
+}
+
+.btn-brand2 {
+    padding: 5px 15px;
+    background: var(--brand-color);
+    color: #fff;
+    border-radius: 0;
+    transition: var(--transition);
+}
+
+.btn-brand2:hover {
+    background: var(--brand-color-light);
+    color: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.btn-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+    transition: var(--transition);
+}
+
+.btn-sm:hover {
+    background: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+.btn-md {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+    transition: var(--transition);
+}
+
+.btn-md:hover {
+    background: var(--dark);
+    border-color: var(--dark);
+}
+
+.btn-md:hover i {
+    transition: var(--transition);
+}
+
+.btn-md:hover i {
+    color: #fff !important;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    color: var(--brand-color);
+
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--brand-color);
+    z-index: -1;
+}
+
+.title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--brand-color);
+    z-index: -1;
+}
+
+.title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--dark);
+}
+
+/* TopBar */
+.topbar-address i {
+    color: var(--brand-color);
+}
+
+.navbar-brand img {
+    width: 80px;
+}
+
+/* NavBar */
+.navbar-nav .nav-link.active {
+    color: var(--brand-color);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--brand-color);
+}
+
+/* Hero Slider */
+#hero {
+    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(../image/bg-hero.jpg);
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* About */
+.about-title {
+    color: var(--brand-color);
+}
+
+.about-icon i {
+    color: var(--brand-color);
+}
+
+/* Services */
+.services i {
+    color: var(--brand-color);
+}
+
+.services:hover i {
+    color: #fff;
+}
+
+.services:hover h4 {
+    color: #fff;
+}
+
+.services {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.services:hover {
+    background: var(--brand-color);
+    color: #fff;
+}
+
+/* Project */
+.project-img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project-img img {
+    transition: all 0.5s;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+/* Team */
+.team {
+    position: relative;
+}
+
+.team-text {
+    position: absolute;
+    width: calc(100% - 50px);
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand-color-light);
+    padding: 15px;
+    text-align: center;
+    color: #fff !important;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.team:hover .team-text {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.team-img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.team-img img {
+    transition: var(--transition);
+}
+
+.team:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact  */
+.form-group .form-control {
+    border-radius: 0;
+}
+
+.form-group .form-control:focus {
+    box-shadow: none;
+    border-color: var(--brand-color);
+}
+
+iframe {
+    width: 100%;
+}
+
+/* Testimonial */
+.testimonial .star {
+    color: #f0be40;
+}
+
+.person-img {
+    width: 80px;
+}
+
+.testimonial-carousel .owl-dots .owl-dot span {
+    width: 15px;
+    height: 15px;
+    background: var(--dark);
+    transition: var(--transition);
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active span {
+    width: 40px;
+    background: var(--brand-color);
+}
+
+.testimonial-carousel .owl-item.center .testimonial {
+    background: var(--brand-color-light) !important;
+    border-color: var(--brand-color-light) !important;
+    color: #fff !important;
+}
+/* Footer */
+footer {
+    padding: 100px 0 0;
+}
+#footer{
+    background: #14141F;
+    color: #fff;
+}
+.footer-top{
+    padding-bottom: 40px;
+}
+.footer-top h2{
+    color: var(--brand-color) !important;
+}
+.footer-contact-icon p i{
+    color: var(--brand-color);
+}
+.footer-top i{
+    font-weight: bolder;
+}
+.footer-top .input-group{
+    padding: 10px;
+    background: #fff;
+}
+.footer-top .input-group .form-control:focus{
+    box-shadow: none;
+}
+.footer-top .input-group .form-control{
+    border: none;
+}
+.footer-bottom{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
